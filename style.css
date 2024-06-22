@@ -10,6 +10,11 @@
     margin: 0;
     padding: auto;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 nav{
     background-color: var(--bg-color);
@@ -20,7 +25,8 @@ nav{
     flex-direction: row;
     align-items: center;
     width: 100%;
-    overflow: hidden;
+    position: fixed;
+    z-index: 3;
 }
 .nav-items{
     display: flex;
@@ -54,28 +60,33 @@ nav{
 }
 .bg{
     background: url('./Images/bg\ \(2\).jpeg') fixed no-repeat;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
+    position: relative;
 }
 .content{
-    width: 45%;
+    width: 100%;
     padding: 10px;
-    text-align: justify;
-    margin-left: 10%;
-    padding-top: 15%;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
-.content h2{
-    font-size: 100px;
+.content h1{
+    font-size: 5rem;
 }
 .content h4{
-    font-size: 55px;
+    font-size: 3rem;
     color: var(--main-color);
-    font-weight: lighter;
 }
 .content p{
-    margin: 14px auto;
+    width: 70%;
+    margin: auto;
     color: var(--font-color);
+    margin-bottom:1rem;
 }
 .btn{
     padding: 8px 35px;
@@ -85,41 +96,32 @@ nav{
     color: #fff6ff;
     text-decoration: none;
     transition:all 0.3s ease;
+    
 }
 .btn:hover{
     background-color: var(--color);
 }
-.container{
-    width:90%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap:40px;
-    flex-wrap: wrap;
-    padding: 10px;
-    overflow: hidden;
-}
-.about,.product,.review,.wrapper,.contact{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap:40px;
+main{
+    max-width: 75rem;
     width: 100%;
-    padding: 10px;
+    margin: auto;
+    padding: 1rem 2rem;
 }
 .sub-title{
     text-align: center;
-    font-size: 40px;
+    font-size: 3rem;
     text-transform: capitalize;
+    margin: 2rem auto;
 }
 .sub-title span{
     color: var(--main-color);
     padding: 15px;
 }
 .about{
-    flex-direction: row;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
 }
 .video img{
     width: 500px;
@@ -131,7 +133,6 @@ nav{
     text-align: justify;
     overflow: hidden;
     padding: 14px;
-    width: 500px;
 }
 .about-us h3{
     font-size: 35px;
@@ -143,14 +144,22 @@ nav{
     line-height: 1.5rem;
     margin: 14px auto;
 }
+.product{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    place-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
 .product-items img{
     width: 200px;
     height: 250px;
     object-fit: cover;
 }
 .product-items,.customer{
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
     padding: 20px;
+    border-radius: 5px;
 }
 .product-items .details{
     text-align: center;
@@ -204,7 +213,23 @@ nav{
 }
 .product-items .share:hover,.product-items .heart:hover{
     transform: scale(1.3);
-
+}
+.review{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+.customer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile{
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
 }
 .customer .star{
     color: var(--main-color);
@@ -212,15 +237,12 @@ nav{
 }
 .customer p{
     text-align: justify;
-    width: 350px;
-}
-.customer .profile{
-    margin-top: 14px;
 }
 .customer .profile img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    object-fit: cover;
 }
 .customer .person-details .name{
     color: var(--font-color);
@@ -235,6 +257,7 @@ nav{
     padding: 10px;
 }
 .faq{
+    margin: 1rem auto;
     background-color:#ebebeb;
     width: 100%;
     padding: 10px;
@@ -248,44 +271,30 @@ nav{
     color: var(--sub-color);
 }
 .img img{
-    width: 500px;
+    width: 550px;
     height: 400px;
     object-fit: cover;
-} 
-.my-form label{
-    display: block;
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-.my-form input{
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 4px;
-    outline-color: var(--main-color);
-}
-.my-form textarea{
-    outline-color: var(--main-color);
-    width: 100%;
-    padding: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 .btn a{
     color: var(--bg-color);
     text-decoration: none;
 }
 .footer{
+    background-color:#6a7b6acc;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
     overflow: hidden;
+    padding: 1rem;
 }
 .footer p{
     color: var(--font-color);
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 0.1rem;
+    position: relative;
+    bottom: 0%;
 }
 .footer ul{
     list-style: none;
@@ -298,7 +307,7 @@ nav{
 }
 .footer ul li a{
     text-decoration: none;
-    color: var(--sub-color);
+    color: #f5f4f5;
     transition: all 0.3s ease;
 }
 .footer li a:hover{
@@ -309,4 +318,118 @@ nav{
     background: var(--bg-color);
     padding: 10px;
     font-size: 16px;
+}
+.my-form{
+    width: 100%;
+    max-width: 40rem;
+    margin: auto;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    margin: auto;
+}
+.my-form label{
+    display: block;
+    margin: 0.5rem auto;
+    font-size: 1.5rem;
+}
+.my-form input,textarea{
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    outline-color: var(--main-color);
+    border: 1px solid var(--hover-color);
+}
+textarea{
+    margin-bottom: 1rem;
+}
+#mb-menu {
+    width: 40px;
+    height: 30%;
+    object-fit: cover;
+    cursor: pointer;
+    display: none;
+}
+.mb-bar{
+    display: none;
+}
+@media screen and (max-width:540px) {
+    .product{
+        grid-template-columns: auto ;
+    }
+    .about{
+        grid-template-columns: auto;
+    }
+    .review{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .sub-title{
+        font-size: 2rem;
+    }
+    .content h1{
+        font-size: 2rem;
+    }
+    .content h4{
+        font-size: 1.5rem;
+    }
+    .content p{
+        font-size: 1rem;
+        width: 100%;
+        padding: 1rem;
+    }
+    .icons{
+        display: none;
+    }
+    .nav-items{
+        display:block;
+    }
+    .video img{
+        width: 100%;
+    }
+    .mb-bar{
+        display: block;
+    }
+    #mb-menu{
+        display: block;
+    }
+    .nav-items{
+        position: absolute;
+        top: 4rem;
+        margin: auto;
+        align-items: flex-end;
+        width: 100%;
+        background-color:var(--bg-color);
+        text-align: center;
+        padding-right: 10%;
+    }
+    .nav-items li{
+        display: block;
+        align-self: flex-end;
+        margin: 8px;
+        padding: 10px;
+        background-color: var(--hover-color);
+    }
+}
+@media screen and (min-width:541px) and (max-width:940px) {
+    .product{
+        grid-template-columns: auto auto;
+    }
+    .review{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+    }
+    .video img{
+        width: 100%;
+    }
+}
+
+.showMenu{
+    display: none;
 }

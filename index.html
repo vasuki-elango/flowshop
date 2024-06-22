@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Flower shop</title>
 </head>
@@ -12,7 +12,7 @@
     <header>
         <nav>
             <div class="title">
-                <a href="#">Flower.</a>
+                <a href="#">Fresh Flowers.</a>
             </div>
 
             <ul class="nav-items">
@@ -29,35 +29,42 @@
                 <a class="fas fa-user"></a>
             </div>
 
+            <div class="mb-bar">
+                <img src="./Images/menu.png" alt="menu" id="mb-menu">
+            </div>
         </nav>
     </header>
 
     <section>
-       <div class="bg">
-                <div class="content">
-                    <h2>Fresh Flowers</h2>
-                    <h4>Natural & Beautiful flowers</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit pariatur, corrupti, soluta ducimus atque sapiente eveniet, quibusdam facere esse neque sed possimus.</p>
-                    <a class="btn" href="">Shop Now</a>
-                </div>
+        <div class="bg">
+            <div class="content">
+                <h1>Fresh Flowers</h1>
+                <h4>Natural & Beautiful flowers</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit pariatur, corrupti, soluta ducimus atque sapiente eveniet, quibusdam facere esse neque sed possimus.</p>
+                <a class="btn" href="#">Shop Now</a>
+            </div>
         </div>
+    </section>
 
-        <div class="container">
-            <h2 class="sub-title" id="about-us"><span>About</span>Us</h2>
+    <main>
+        <section id="about-us">
+            <h2 class="sub-title"><span>About</span>Us</h2>
             <div class="about">
                 <div class="video">
                     <img src="./Images/bg (1).jpg" alt="">
                 </div>
                 <div class="about-us">
                     <h3>Why choose us</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nihil laboriosam rerum dolore itaque ipsum quae ipsam molestiae recusandae. Obcaecati numquam consequuntur architecto tempore dolor quo saepe laboriosam delectus consectetur?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nihil laboriosam rerum dolore itaque ipsum quae ipsam molestiae recusandae. Obcaecati numquam consequuntur architecto tempore dolor quo saepe laboriosam delectus consectetur?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nihil laboriosam rerum dolore itaque ipsum quae ipsam molestiae recusandae. Obcaecati numquam consequuntur architecto tempore dolor quo saepe laboriosam delectus consectetur?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nihil laboriosam rerum dolore e recusandae. Obcaecati numquam consequuntur architecto tempore dolor quo saepe laboriosam delectus consectetur?</p>
                     <a class="btn" href="">Learn More</a>
 
                 </div>
             </div>
+        </section>
 
-            <h2 class="sub-title" id="products">latest<span>Products</span></h2>
+        <section id="products">
+            <h2 class="sub-title">latest<span>Products</span></h2>
             <div class="product" >
                 <div class="product-items">
                     <img src="./Images/flower (1).jpg" alt="">
@@ -170,8 +177,10 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <h2 class="sub-title" id="reviews">customer's<span>Review</span></h2>
+        <section id="reviews">
+            <h2 class="sub-title">customer's<span>Review</span></h2>
             <div class="review">
                 <div class="customer">
                     <div class="star">
@@ -225,7 +234,9 @@
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section>
             <h2 class="sub-title"><span>Freqently</span>Asked</h2>
             <div class="wrapper">
                 <div class="faq">
@@ -273,25 +284,23 @@
                     </details>
                 </div>
             </div>
+        </section>
 
-            <h2 class="sub-title" id="contacts"><span>Contact</span>Us</h2>
+        <section id="contacts">
+            <h2 class="sub-title"><span>Contact</span>Us</h2>
             <div class="contact">
                 <form action="" class="my-form">
                     <label for="name">Name</label>
                     <input type="text" id="name">
                     <label for="email">Email</label>
                     <input type="email" id="email">
-                    <label for="number">Phone Number</label>
-                    <input type="tel" id="number" max="12">
+                    <label for="number">Message</label>
                     <textarea rows="10"></textarea>
                     <button type="submit" class="btn"><a href="./index.html">Sent Message</a></button>
                 </form>
-                <div class="img">
-                    <img src="./Images/flower (4).jpg" alt="">
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
             <div class="footer">
@@ -333,18 +342,20 @@
                         <li><a href="#">Virudhunagar-626001, India</a></li>
 
                         <div class="social-media">
-                            <a href="" class="fa fa-cc-visa"></a>
-                            <a href="" class="fa fa-paypal"></a>
-                            <a href="" class="fa fa-instagram"></a>
-                            <a href="" class="fa fa-facebook"></a>
+                            <a href="" class="fas fa-cc-visa"></a>
+                            <a href="" class="fas fa-paypal"></a>
+                            <a href="" class="fas fa-instagram"></a>
+                            <a href="" class="fas fa-facebook"></a>
                         </div>
                     </ul>
                 </div>
             </div>
 
             <div class="copyrights">
-                <p>Created By Mr.Web Designer | All Rights Reserved</p>
+                <p>Created By Vasuki-Elango | All Rights Reserved</p>
             </div>
     </footer>
+
+    <script src="./Script.js"></script>
 </body>
 </html>
